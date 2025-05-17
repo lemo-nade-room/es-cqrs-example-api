@@ -13,6 +13,8 @@ let package = Package(
             url: "https://github.com/swift-server/swift-openapi-async-http-client.git",
             from: "1.0.0",
         ),
+        .package(url: "https://github.com/lemo-nade-room/event-store-adapter-swift.git", from: "1.0.0"),
+        .package(url: "https://github.com/lemo-nade-room/event-store-adapter-swift-support.git", branch: "main"),
     ],
     targets: [
         .target(
@@ -22,7 +24,26 @@ let package = Package(
         .testTarget(
             name: "EXWebAPITests",
             dependencies: [
-                .target(name: "EXWebAPI")
+                .target(name: "EXWebAPI"),
+                .target(name: "EXTestUtil"),
+            ],
+            swiftSettings: swiftSettings,
+        ),
+
+        // MARK: Event
+        .target(
+            name: "EXEvent",
+            dependencies: [
+                .product(name: "EventStoreAdapter", package: "event-store-adapter-swift"),
+                .product(name: "EventStoreAdapterSupport", package: "event-store-adapter-swift-support"),
+            ],
+            swiftSettings: swiftSettings,
+        ),
+        .testTarget(
+            name: "EXEventTests",
+            dependencies: [
+                .target(name: "EXEvent"),
+                .target(name: "EXTestUtil"),
             ],
             swiftSettings: swiftSettings,
         ),
@@ -30,12 +51,16 @@ let package = Package(
         // MARK: Write
         .target(
             name: "EXWrite",
+            dependencies: [
+                .target(name: "EXEvent"),
+            ],
             swiftSettings: swiftSettings,
         ),
         .testTarget(
             name: "EXWriteTests",
             dependencies: [
-                .target(name: "EXWrite")
+                .target(name: "EXWrite"),
+                .target(name: "EXTestUtil"),
             ],
             swiftSettings: swiftSettings,
         ),
