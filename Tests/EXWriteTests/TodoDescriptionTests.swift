@@ -5,7 +5,7 @@ import Testing
 
 @Suite struct TodoDescriptionTests {
     @Test(
-        .tags(.small),
+        .enabled(if: small),
         arguments: [
             """
             ## 概要
@@ -21,7 +21,7 @@ import Testing
         #expect(description.value == text)
     }
 
-    @Test(.tags(.small))
+    @Test(.enabled(if: small))
     func TodoDescriptionが不正値で初期化できない() throws {
         let text = String(repeating: "A", count: 1001)
         #expect(Todo.Description(value: text) == nil)

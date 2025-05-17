@@ -1,12 +1,13 @@
 name: Swift format
 on:
+  push:
+    branches:
+      - main
   pull_request:
     paths:
       - ".github/workflows/swift-format.yaml"
       - "**.swift"
       - ".swift-format"
-  schedule:
-    - cron: '0 0 * * *'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

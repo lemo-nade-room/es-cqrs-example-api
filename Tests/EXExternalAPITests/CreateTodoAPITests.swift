@@ -5,7 +5,7 @@ import OpenAPIAsyncHTTPClient
 import OpenAPIRuntime
 import Testing
 
-@Test(.tags(.medium))
+@Test(.enabled(if: medium))
 func WebAPIでTodoを作成できる() async throws {
     // Arrange
     let serverURLString =

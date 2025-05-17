@@ -5,7 +5,7 @@ import Testing
 
 @Suite struct TodoTitleTests {
     @Test(
-        .tags(.small),
+        .enabled(if: small),
         arguments: [
             "",
             "スルメを買う",
@@ -18,7 +18,7 @@ import Testing
     }
 
     @Test(
-        .tags(.small),
+        .enabled(if: small),
         arguments: [
             """
             改行が
