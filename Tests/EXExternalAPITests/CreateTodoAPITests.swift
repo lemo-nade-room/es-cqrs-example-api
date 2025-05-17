@@ -20,7 +20,6 @@ func WebAPIでTodoを作成できる() async throws {
     let response = try await client.createTodo(.init())
 
     // Assert
-    print(response)
     let createdTodoId = try response.created.body.json.id
     let getTodoResponse = try await client.getTodoById(
         .init(path: .init(id: createdTodoId))
