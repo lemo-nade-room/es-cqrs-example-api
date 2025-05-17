@@ -18,6 +18,12 @@ let package = Package(
             ],
             swiftSettings: swiftSettings,
         ),
+
+        // MARK: Test Utility
+        .target(
+            name: "EXTestUtil",
+            swiftSettings: swiftSettings,
+        ),
     ],
 )
 var swiftSettings: [SwiftSetting] {
