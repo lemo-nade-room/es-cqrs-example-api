@@ -13,8 +13,11 @@ let package = Package(
             url: "https://github.com/swift-server/swift-openapi-async-http-client.git",
             from: "1.0.0",
         ),
-        .package(url: "https://github.com/lemo-nade-room/event-store-adapter-swift.git", from: "1.0.0"),
-        .package(url: "https://github.com/lemo-nade-room/event-store-adapter-swift-support.git", branch: "main"),
+        .package(
+            url: "https://github.com/lemo-nade-room/event-store-adapter-swift.git", from: "1.0.0"),
+        .package(
+            url: "https://github.com/lemo-nade-room/event-store-adapter-swift-support.git",
+            branch: "main"),
     ],
     targets: [
         .target(
@@ -35,7 +38,8 @@ let package = Package(
             name: "EXEvent",
             dependencies: [
                 .product(name: "EventStoreAdapter", package: "event-store-adapter-swift"),
-                .product(name: "EventStoreAdapterSupport", package: "event-store-adapter-swift-support"),
+                .product(
+                    name: "EventStoreAdapterSupport", package: "event-store-adapter-swift-support"),
             ],
             swiftSettings: swiftSettings,
         ),
@@ -52,7 +56,7 @@ let package = Package(
         .target(
             name: "EXWrite",
             dependencies: [
-                .target(name: "EXEvent"),
+                .target(name: "EXEvent")
             ],
             swiftSettings: swiftSettings,
         ),
