@@ -27,6 +27,19 @@ let package = Package(
             swiftSettings: swiftSettings,
         ),
 
+        // MARK: Write
+        .target(
+            name: "EXWrite",
+            swiftSettings: swiftSettings,
+        ),
+        .testTarget(
+            name: "EXWriteTests",
+            dependencies: [
+                .target(name: "EXWrite")
+            ],
+            swiftSettings: swiftSettings,
+        ),
+
         // MARK: Test Utility
         .target(
             name: "EXTestUtil",
