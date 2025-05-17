@@ -16,18 +16,25 @@ package enum TodoEvent: EventStoreAdapter.Event {
         package var occurredAt: Date
         package var isCreated: Bool
 
+        package var title: String
+        package var description: String
+
         package init(
             id: Id,
             aid: AID,
             seqNr: Int,
             occurredAt: Date,
-            isCreated: Bool
+            isCreated: Bool,
+            title: String,
+            description: String,
         ) {
             self.id = id
             self.aid = aid
             self.seqNr = seqNr
             self.occurredAt = occurredAt
             self.isCreated = isCreated
+            self.title = title
+            self.description = description
         }
     }
 }
