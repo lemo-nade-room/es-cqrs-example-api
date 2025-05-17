@@ -1,7 +1,11 @@
-package import Testing
+import Foundation
 
-extension Tag {
-    @Tag package static var small: Self
-    @Tag package static var medium: Self
-    @Tag package static var large: Self
+package var small: Bool {
+    ProcessInfo.processInfo.environment["SMALL"] == "true"
+}
+package var medium: Bool {
+    ProcessInfo.processInfo.environment["MEDIUM"] == "true"
+}
+package var large: Bool {
+    ProcessInfo.processInfo.environment["LARGE"] == "true"
 }
