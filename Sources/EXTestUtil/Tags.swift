@@ -1,4 +1,4 @@
-import Testing
+package import Testing
 
 extension Tag {
     @Tag package static var small: Self
