@@ -1,0 +1,24 @@
+openapi: 3.1.0
+info:
+  title: Todo API
+  description: API for managing Todo items
+  version: 1.0.0
+paths:
+  /api/todo:
+    post:
+      summary: Create a new Todo
+      description: Creates a new Todo with default values
+      operationId: createTodo
+      responses:
+        '201':
+          description: Todo created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    format: uuid
+                required:
+                  - id
