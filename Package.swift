@@ -14,10 +14,14 @@ let package = Package(
             from: "1.0.0",
         ),
         .package(
-            url: "https://github.com/lemo-nade-room/event-store-adapter-swift.git", from: "1.0.0"),
+            url: "https://github.com/lemo-nade-room/event-store-adapter-swift.git",
+            from: "1.0.0"
+        ),
         .package(
             url: "https://github.com/lemo-nade-room/event-store-adapter-swift-support.git",
-            branch: "main"),
+            branch: "main"
+        ),
+        .package(url: "https://github.com/pointfreeco/swift-dependencies.git", from: "1.0.0"),
     ],
     targets: [
         .target(
@@ -56,7 +60,8 @@ let package = Package(
         .target(
             name: "EXWrite",
             dependencies: [
-                .target(name: "EXEvent")
+                .product(name: "Dependencies", package: "swift-dependencies"),
+                .target(name: "EXEvent"),
             ],
             swiftSettings: swiftSettings,
         ),
