@@ -77,6 +77,34 @@
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EXReadModel"
+               BuildableName = "EXReadModel"
+               BlueprintName = "EXReadModel"
+               ReferencedContainer = "container:">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EXProjection"
+               BuildableName = "EXProjection"
+               BlueprintName = "EXProjection"
+               ReferencedContainer = "container:">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -133,6 +161,16 @@
                BlueprintIdentifier = "EXWriteTests"
                BuildableName = "EXWriteTests"
                BlueprintName = "EXWriteTests"
+               ReferencedContainer = "container:">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EXProjectionTests"
+               BuildableName = "EXProjectionTests"
+               BlueprintName = "EXProjectionTests"
                ReferencedContainer = "container:">
             </BuildableReference>
          </TestableReference>
