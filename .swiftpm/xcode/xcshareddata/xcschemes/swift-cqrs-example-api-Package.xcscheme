@@ -15,6 +15,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EXApp"
+               BuildableName = "EXApp"
+               BlueprintName = "EXApp"
+               ReferencedContainer = "container:">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "EXEvent"
                BuildableName = "EXEvent"
                BlueprintName = "EXEvent"
@@ -72,6 +86,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EXAppTests"
+               BuildableName = "EXAppTests"
+               BlueprintName = "EXAppTests"
+               ReferencedContainer = "container:">
+            </BuildableReference>
+         </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
@@ -151,9 +175,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EXEvent"
-            BuildableName = "EXEvent"
-            BlueprintName = "EXEvent"
+            BlueprintIdentifier = "EXApp"
+            BuildableName = "EXApp"
+            BlueprintName = "EXApp"
             ReferencedContainer = "container:">
          </BuildableReference>
       </MacroExpansion>
