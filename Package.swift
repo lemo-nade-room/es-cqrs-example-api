@@ -56,6 +56,25 @@ let package = Package(
             swiftSettings: swiftSettings,
         ),
 
+        // MARK: Application
+        .target(
+            name: "EXApp",
+            dependencies: [
+                .target(name: "EXWrite")
+            ],
+            swiftSettings: swiftSettings,
+        ),
+        .testTarget(
+            name: "EXAppTests",
+            dependencies: [
+                .product(name: "EventStoreAdapterForMemory", package: "event-store-adapter-swift"),
+
+                .target(name: "EXApp"),
+                .target(name: "EXTestUtil"),
+            ],
+            swiftSettings: swiftSettings,
+        ),
+
         // MARK: Write
         .target(
             name: "EXWrite",
