@@ -56,6 +56,30 @@ let package = Package(
             swiftSettings: swiftSettings,
         ),
 
+        // MARK: Read Model
+        .target(
+            name: "EXReadModel",
+            swiftSettings: swiftSettings,
+        ),
+
+        // MARK: Projection
+        .target(
+            name: "EXProjection",
+            dependencies: [
+                .target(name: "EXEvent"),
+                .target(name: "EXReadModel"),
+            ],
+            swiftSettings: swiftSettings,
+        ),
+        .testTarget(
+            name: "EXProjectionTests",
+            dependencies: [
+                .target(name: "EXProjection"),
+                .target(name: "EXTestUtil"),
+            ],
+            swiftSettings: swiftSettings,
+        ),
+
         // MARK: Application
         .target(
             name: "EXApp",
